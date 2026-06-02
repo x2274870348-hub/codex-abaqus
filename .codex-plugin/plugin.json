@@ -1,0 +1,45 @@
+{
+  "name": "codex-abaqus",
+  "version": "1.0.0",
+  "description": "MCP Server bridging Codex AI with Abaqus FEA. Submit jobs, read ODB results, model via Python API, and execute arbitrary Abaqus scripts.",
+  "author": "abandon",
+  "type": "mcp",
+  "entry": {
+    "command": "py",
+    "args": ["-m", "codex_abaqus"]
+  },
+  "marketplace": {
+    "marketplace": "personal",
+    "category": "engineering",
+    "tags": ["abaqus", "fea", "simulation", "finite-element", "engineering"]
+  },
+  "env": {
+    "ABAQUS_COMMAND": {
+      "description": "Path to Abaqus command (e.g. abaqus.bat). Auto-detected if not set.",
+      "required": false
+    },
+    "ABAQUS_WORK_DIR": {
+      "description": "Working directory for Abaqus jobs and output files.",
+      "required": false
+    },
+    "ABAQUS_SCRATCH": {
+      "description": "Scratch directory for temporary scripts.",
+      "required": false
+    },
+    "ABAQUS_CPUS": {
+      "description": "Default number of CPUs for job submission.",
+      "required": false,
+      "default": "4"
+    },
+    "ABAQUS_TIMEOUT": {
+      "description": "Default timeout in seconds.",
+      "required": false,
+      "default": "3600"
+    }
+  },
+  "requires": {
+    "python": ">=3.10",
+    "abaqus": ">=2020",
+    "packages": ["mcp>=1.0.0"]
+  }
+}
