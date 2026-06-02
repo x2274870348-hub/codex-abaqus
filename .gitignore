@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Abaqus scratch
+.abaqus_mcp_scratch/
+*.odb
+*.lck
+*.abq
+*.com
+*.mdl
+*.pac
+*.prt
+*.rec
+*.res
+*.sel
+*.sim
+*.stt
+*.sup
+*.023
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+.DS_Store
